@@ -1,3 +1,18 @@
 # OCR-and-AI-Transcription-Project-8510
 
-I will work with The Colored American Magazine, a Black periodical published in the early twentieth century. I chose this publication because it offers a manageable starting point for experimentation. The magazine has a digitized database, which I will draw from for this project. While I often critique the quality of OCR, this work will allow me to engage directly with those challenges. I plan to choose an issue, download it as a PDF, convert it to an image using ImageMagick, then run it through Tesseract to perform OCR. Once I have that text, I will use OpenAI’s GPT-5-nano to process and interpret the material. I am particularly interested in observing how the model handles text with imperfect OCR, where it might help clarify content, but also where it could distort meaning or generate harmful or offensive language.
+I will work with "The Colored American Magazine", a Black periodical published in the early twentieth century, and "Negro Digest" magazine. I chose this publication because it offers a manageable starting point for experimentation. The magazine has a digitized database, which I will draw from for this project. While I often critique the quality of OCR, this work will allow me to engage directly with those challenges.
+
+I plan to choose an issue of "The Colored American Magazine" and Negro Digest, download it as a PDF, convert it to an image using ImageMagick, then run it through Tesseract to perform OCR. Once I have that text, I will use OpenAI’s GPT-5-nano to process and interpret the material. I am particularly interested in observing how the model handles text with imperfect OCR, where it might help clarify content, but also where it could distort meaning or generate harmful or offensive language.
+
+To install Tesseract on System:
+brew install Tesseract 
+
+
+Install Dependencies for ImageMagick on System:
+brew install wand pillow pytesseract
+
+
+To install ImageMagick on System:
+brew install ImageMagick ghostscript
+
+
