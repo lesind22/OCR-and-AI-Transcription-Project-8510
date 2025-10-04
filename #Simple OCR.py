@@ -2,7 +2,7 @@
 """
 Simple OCR Script
 =================
-Usage:
+Usage in Terminal:
     python simple_ocr.py /Users/indiralessington/Desktop/TheColoredAmerican.pdf
 """
 
