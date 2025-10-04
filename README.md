@@ -37,4 +37,4 @@ ________________________________________________________________________________
 
 To Run #Simple OCR.py, into Python terminal:
 
-  python "# Simple OCR.py" "Users/indiralessington/Desktop/TheColoredAmerican.pdf"
+  python "#Simple OCR.py" "Users/indiralessington/Desktop/TheColoredAmerican.pdf"
