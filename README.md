@@ -33,6 +33,6 @@ ________________________________________________________________________________
 
 
 
-To Run "simple_ocr.py" Script, into Python terminal enter (VSCode):
+To Run "simple_ocr.py" Script, into Python terminal enter (Visual Studio Code):
 
 python simple_ocr.py "/Users/indiralessington/Desktop/TheColoredAmerican.pdf"
