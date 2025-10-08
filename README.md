@@ -1,24 +1,29 @@
 # OCR-and-AI-Transcription-Project-8510
 
-I will work with "The Colored American Magazine," a Black magazine publication advocating for the quest for Black identity and representation in the early 19th century. I chose this publication because it offers a manageable starting point for experimentation. I plan to select one issue of "The Colored American Magazine," download it as a PDF, convert it to images using pdf2images, and then run it through Tesseract to perform OCR. Once I have that text, I will use OpenAI’s GPT-5-nano to process and interpret the text. I am particularly interested in observing how the model handles text with imperfect OCR, where it might help clarify content, but also where it could distort images or have offensive language.
+I am working with "The Colored American Magazine," a Black magazine publication that contributed to advocating for Black identity and representation in the early 19th century. I chose this publication because it offers a manageable starting point for experimentation. I plan to select one issue of "The Colored American Magazine," download it as a PDF, convert it to images using pdf2images, and then run it through Tesseract to perform OCR. Once I have that text, I will use OpenAI’s GPT-5-nano to process and interpret the text. I am particularly interested in observing how the model handles text with imperfect OCR, where it might help clarify content, but also where it could distort images or have omit language.
 
 To Run Scripts, these packages and dependencies must be installed:
 _________________________________________________________________________________________________________________________________________________________________________________________
 
 To install Tesseract on System (MacOS):
  
-  brew install Tesseract 
+  brew install Tesseract (DOUBLE CHECK HOW TO INSTALL IF NEEDED)
+
+
+To install Tesseract on Terminal in VSCode:
+
+  python3 install pytesseract
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
 
-To install pdf2image (MacOS):
+To install pdf2image VSCode (MacOS):
  
   python3 install pdf2image
 
 
 
-To install dependencies for pdf2image (MacOS)
+To install dependencies for pdf2image VSCode (MacOS)
 
   python3 install poppler
 
