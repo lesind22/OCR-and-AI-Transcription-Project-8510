@@ -13,24 +13,26 @@ ________________________________________________________________________________
 
 To install Tesseract on Terminal in VSCode:
 
-   python3 install pytesseract (only attempt "pip3", if "python3" doesn't work)
-   pip3 install pytesseract
-
-
-To install Tesseract using Homebrew in System Terminal (macOS):
-  
-   brew install tesseract
+  	 pip3 install pytesseract
 
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
-Before creating your virtual environment isolating your project's dependencies, make sure Poppler is installed via Homebrew in System Terminal (macOS):
+
+To install Tesseract using Homebrew in System Terminal (macOS):
+
+  	 brew install tesseract
+
+
+_________________________________________________________________________________________________________________________________________________________________________________________
+
+Before creating your virtual environment, isolating your project's dependencies, make sure Poppler is installed via Homebrew in System Terminal (macOS):
     
      brew install poppler
 
 
      
-Before installing pdf2image, make sure a virtual environment is created in your VSCode terminal. Instructions below:
+Before installing pdf2image, create a virtual environment in your VSCode terminal. Instructions below:
    
     python3 -m venv venv
     source .venv/bin/activate
@@ -38,7 +40,7 @@ Before installing pdf2image, make sure a virtual environment is created in your 
 
 
 
-While installing opencv-python, make sure your virtual environment is activated. Below are the instrcutions to install opencv-python:
+While installing opencv-python, make sure your virtual environment is activated. Below are the instructions to install opencv-python:
   
     source .venv/bin/activate
     pip3 install opencv-python
