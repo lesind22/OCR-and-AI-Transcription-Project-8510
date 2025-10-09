@@ -30,7 +30,7 @@ Before creating your virtual environment, isolating your project's dependencies,
     
      brew install poppler
 
-
+_________________________________________________________________________________________________________________________________________________________________________________________
      
 Before installing pdf2image, create a virtual environment in your VSCode terminal. Instructions below:
    
@@ -38,6 +38,7 @@ Before installing pdf2image, create a virtual environment in your VSCode termina
     source .venv/bin/activate
 
 
+_________________________________________________________________________________________________________________________________________________________________________________________
 
 
 While installing opencv-python, make sure your virtual environment is activated. Below are the instructions to install opencv-python:
