@@ -4,10 +4,10 @@ I am working with "The Colored American Magazine," a Black magazine publication 
 
 To Run Scripts, these packages and dependencies must be installed via VSCode in Python:
 
-Tesseract
-pdf2image
-opencv-python
-OpenAI (no need to install web-based application)
+	Tesseract
+	pdf2image
+	opencv-python
+	OpenAI (no need to install web-based application)
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
