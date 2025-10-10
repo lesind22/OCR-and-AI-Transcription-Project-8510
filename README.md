@@ -4,16 +4,24 @@ I am working with "The Colored American Magazine," a Black magazine publication 
 
 To Run Scripts, these packages and dependencies must be installed via VSCode in Python:
 
-- Tesseract
+- Pillow
 - pdf2image
+- Pytesseract (Tesseract)
 - opencv-python
 - OpenAI (no need to install web-based application)
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
+To install Pillow:
+
+		pip install Pillow
+
+_________________________________________________________________________________________________________________________________________________________________________________________
+
 To install Tesseract on Terminal in VSCode:
 
-  	 pip3 install pytesseract
+  	pip install pytesseract
+
 
 
 _________________________________________________________________________________________________________________________________________________________________________________________
