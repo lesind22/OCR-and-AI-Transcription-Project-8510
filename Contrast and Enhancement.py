@@ -2,7 +2,7 @@
 
 #!/usr/bin/env python3
 """
-Demo: Contrast Enhancement for Historical Documents Cover Page
+Contrast Enhancement for Historical Documents Cover Page
 =============================================================
 
 This script applies several contrast enhancement techniques to a single image:
@@ -11,8 +11,18 @@ This script applies several contrast enhancement techniques to a single image:
 - Gamma Correction
 - Unsharp Masking
 
-Usage:
-    python Contrast and Enhancement.py "/path/to/image.png"
+Requirements:
+    - Python 3.0 (most recent version available)
+    - Install dependencies with:
+        pip install opencv-python numpy matplotlib (Instructions in README)
+
+How to run:
+    # Activate your virtual environment (if any), then run ENTIRE command in Terminal:
+
+   /Users/indiralessington/Desktop/8510\ Unit\ 2\ Converting\ Hist.\ Docs.\ Text\ to\ Digital\ Data/ocr_proj_env/bin/python \
+/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/Contrast and Enhancement.py" \
+--image "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/processed-imgs/page_1.png"
+
 """
 
 import sys
@@ -20,9 +30,9 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
+import argparse
 
 def check_dependencies():
-    """Check if required packages are installed."""
     try:
         import cv2
         import numpy
@@ -32,7 +42,6 @@ def check_dependencies():
         sys.exit(1)
 
 def load_image(image_path):
-    """Load and display image information."""
     image = cv2.imread(str(image_path))
     if image is None:
         raise ValueError(f"Could not load image: {image_path}")
@@ -41,26 +50,22 @@ def load_image(image_path):
     return image
 
 def convert_to_grayscale(image):
-    """Convert BGR image to grayscale."""
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     print("✓ Converted to grayscale")
     return gray
 
 def apply_histogram_equalization(image):
-    """Apply global histogram equalization."""
     equalized = cv2.equalizeHist(image)
     print("✓ Applied global histogram equalization")
     return equalized
 
 def apply_clahe(image, clip_limit=2.0, tile_grid_size=(8, 8)):
-    """Apply CLAHE (Contrast Limited Adaptive Histogram Equalization)."""
     clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=tile_grid_size)
     clahe_image = clahe.apply(image)
     print(f"✓ Applied CLAHE (clip_limit={clip_limit}, tile_size={tile_grid_size})")
     return clahe_image
 
 def apply_gamma_correction(image, gamma=1.2):
-    """Apply gamma correction."""
     inv_gamma = 1.0 / gamma
     table = np.array([((i / 255.0) ** inv_gamma) * 255 for i in range(256)]).astype("uint8")
     gamma_corrected = cv2.LUT(image, table)
@@ -68,7 +73,6 @@ def apply_gamma_correction(image, gamma=1.2):
     return gamma_corrected
 
 def apply_unsharp_masking(image, kernel_size=(5, 5), sigma=1.0, amount=1.0, threshold=0):
-    """Apply unsharp masking to enhance text sharpness."""
     blurred = cv2.GaussianBlur(image, kernel_size, sigma)
     sharpened = float(amount + 1) * image - float(amount) * blurred
     sharpened = np.clip(sharpened, 0, 255).astype(np.uint8)
@@ -95,34 +99,33 @@ def show_images(images, titles):
 
 if __name__ == "__main__":
     check_dependencies()
-    if len(sys.argv) != 2:
-        print("Usage: python contrast_enhancement.py /path/to/image.png")
-        sys.exit(1)
 
-    image_path = sys.argv[1]
+    parser = argparse.ArgumentParser(description="Enhance document image contrast")
+    parser.add_argument("--image", required=True, help="Path to input image")
+    parser.add_argument("--output_dir", default="contrast_results", help="Output directory for results")
+    args = parser.parse_args()
+
+    image_path = args.image
+    out_dir = Path(args.output_dir)
+
     if not Path(image_path).is_file():
         print(f"Error: The file '{image_path}' does not exist.")
         sys.exit(1)
 
-    # Load and process the image
     image = load_image(image_path)
     gray = convert_to_grayscale(image)
 
-    # Apply contrast enhancement techniques
     hist_eq = apply_histogram_equalization(gray)
     clahe = apply_clahe(gray)
     gamma = apply_gamma_correction(gray, gamma=1.2)
     unsharp = apply_unsharp_masking(gray)
 
-    # Save outputs
-    out_dir = Path("contrast_results")
     out_dir.mkdir(exist_ok=True)
     save_image(hist_eq, out_dir / "histogram_equalized.png")
     save_image(clahe, out_dir / "clahe.png")
     save_image(gamma, out_dir / "gamma_corrected.png")
     save_image(unsharp, out_dir / "unsharp_masked.png")
 
-    # Show comparison
     show_images(
         [gray, hist_eq, clahe, gamma, unsharp],
         ["Original Grayscale", "Histogram Equalization", "CLAHE", "Gamma Correction", "Unsharp Masking"]
