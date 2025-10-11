@@ -2,7 +2,7 @@
 
 # Project Overview:
 
-This repository provides tools and instructions for processing an issue of The Colored American Magazine, a historic Black publication advocating for Black identity and representation in the early 19th century. The second Python script, "Contrast and Enhancement," will examine the cover of The Colored American Magazine. Using OpenAI's GPT-5-nano, I will further process the extracted text to interpret or clarify content where OCR is imperfect. 
+This repository provides tools and instructions for processing an issue of The Colored American Magazine, a historic Black publication advocating for Black identity and representation in the early 19th century. The second Python script, "Contrast and Enhancement," will examine the cover of The Colored American Magazine. Using OpenAI's GPT-5-nano, I will further process the extracted text ("Truth) to interpret or clarify content where OCR is imperfect. 
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
