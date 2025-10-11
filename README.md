@@ -72,6 +72,9 @@ To Run Contrast and Enhancement Script "opencv-python" must be installed. Instru
 
 	    pip install opencv-python
 
+If you need `matplotlib numpy` installation instructions, they are below:
+
+		pip install matplotlib numpy
 
 To Run Contrast and Enhancement Script input in Terminal:
 
