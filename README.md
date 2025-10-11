@@ -18,9 +18,9 @@ ________________________________________________________________________________
 _________________________________________________________________________________________________________________________________________________________________________________________
 
 # Goal of Project:
-- Analyze how GPT-5-nano handles text with imperfect OCR:  
-  - Observe if the model helps clarify content.  
-  - Note where it may distort images or omit language.
+- Analyze how GPT-5-nano handles text with imperfect OCR:
+	 - Observe if the model helps clarify content.  
+  	 - Note where it may distort images or omit language.
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
