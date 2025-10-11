@@ -3,11 +3,11 @@
 I am working with "The Colored American Magazine," a Black magazine publication that contributed to advocating for Black identity and representation in the early 19th century. I plan to: 
 
 
-        - Select one issue of "The Colored American Magazine" 
-        - Download it as a PDF 
-        - Convert it to images using ImageMagick
-        - Run it through Tesseract to perform OCR. 
-        - Once I have that text, I will use OpenAI’s GPT-5-nano to process and interpret the text 
+- Select one issue of "The Colored American Magazine" 
+- Download it as a PDF 
+- Convert it to images using ImageMagick
+- Run it through Tesseract to perform OCR. 
+- Once I have that text, I will use OpenAI’s GPT-5-nano to process and interpret the text 
 
 I am particularly interested in observing how the model handles text with imperfect OCR, where it might help clarify content, but also where it could distort images or omit language.
 
