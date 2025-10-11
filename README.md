@@ -10,10 +10,16 @@ ________________________________________________________________________________
 # Workflow Instructions:
 
 - Select one issue of "The Colored American Magazine" and download it as a PDF
-- Convert the PDF to images using ImageMagick
-- Run the images through Tesseract to perform Optical Character Recognition (OCR)
-- Extract the cover page and the poem entitled "Truth" from the publication
-- Use OpenAI’s GPT-5-nano to process and interpret the extracted text
+- Run the provided Python script to:
+  - Convert the PDF into images (using ImageMagick via wand).
+  - Perform OCR on the images to extract text (using Tesseract).
+  - Save results to a text file.
+
+- The script extracts all text
+- To focus on the cover page and the poem entitled "Truth,"
+	- Review the output file (`ocr-results.txt`) and locate these sections manually 
+
+- To further process the extracted text with OpenAI’s GPT-5-nano to interpret or clarify content, especially where OCR is imperfect
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
@@ -24,36 +30,42 @@ ________________________________________________________________________________
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
-# Requirements:
-- Python 3.0 (most recent version available) 
-- ImageMagick
-- Tesseract
-- OpenAI GPT-5-nano API access
+# Requirements and Installation of Pytesseract:
+- Python 3.x
+- [ImageMagick](https://imagemagick.org/)
+- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) 
+- Python packages and How to Install: `wand`, `pytesseract`, `Pillow`
+    ```bash
+    pip install wand pytesseract Pillow
+    ```
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
 # Usage:
 
 1. Place your selected PDF in the `input/` directory.
+
 2. Run the following command to convert the PDF to images:
     ```bash
     magick input/yourfile.pdf input/page_%d.png
     ```
+    
 3. Run Tesseract on each image to extract text:
     ```bash
     tesseract input/page_1.png output/page_1.txt
     ```
+    
 4. Run the provided "simple_ocr" Python script to:
     - Extract the cover page
     - Extract the poem “Truth”
     - Prepare text for GPT-5-nano interpretation
+
 5. Review results in the `output/` directory.
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
-# Instructions for Installation of Packages:
+# Instructions for Creating A Virtual Environment:
 _________________________________________________________________________________________________________________________________________________________________________________________
-
 
 Before installing pdf2image, create a virtual environment in your VSCode terminal. Instructions below:
    
@@ -61,19 +73,6 @@ Before installing pdf2image, create a virtual environment in your VSCode termina
     	 source .venv/bin/activate
 
 _________________________________________________________________________________________________________________________________________________________________________________________
-
-To install Wand via Python in VSCode Terminal (if necessary):
-
-		pip install wand
-
-
-
-To install ImageMagick via VSCode Terminal:
-
-		pip install imagemagick
-		
-_________________________________________________________________________________________________________________________________________________________________________________________
-
 To Run Contrast and Enhancement Script "opencv-python" must be installed. Instructions below:
 
 	    pip install opencv-python
