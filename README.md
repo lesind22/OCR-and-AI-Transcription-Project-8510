@@ -43,17 +43,16 @@ ________________________________________________________________________________
 
 - The script automatically extracts:
   - **Cover page:** Only page 1 of the PDF, saving OCR text to `ocr-pages/cover_page.txt`.
-  - **Poem "Truth":** Pages 1 and 2 of the PDF, saving OCR text to `ocr-pages/truth_poem.txt`.
+  - **Poem "Truth":** Pages 9 and 10 of the PDF, saving combined OCR text to `ocr-pages/truth_poem.txt`.
 
 - Processed page images are saved in the `processed-imgs` directory.
-
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 ### 5. Find the Results
 
 - Find your extracted text files in the `ocr-pages` directory:
   - `cover_page.txt` contains the OCR output of the cover page.
-  - `truth_poem.txt` contains the OCR output of the poem "Truth" (from pages 1 and 2).
+  - `truth_poem.txt` contains the OCR output of the poem "Truth" (from pages 9 and 10).
 
 
 _________________________________________________________________________________________________________________________________________________________________________________________
