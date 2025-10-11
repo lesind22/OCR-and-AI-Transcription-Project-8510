@@ -8,75 +8,59 @@ ________________________________________________________________________________
 
 ## Quick Start
 
-Follow these steps to run the OCR script on an issue of "The Colored American Magazine":
+Follow these steps to extract the cover page (page 1) and the poem "Truth" (page 9) using the OCR script:
 
-### 1. Prepare Your Environment
+### 1. Prepare Your Environment:
 
 - **Install system dependencies:**
   - [ImageMagick](https://imagemagick.org/script/download.php)
   - [Tesseract OCR](https://tesseract-ocr.github.io/)
 - **Install Python packages:**
-  ```Python
+  ```python
   pip install wand pytesseract Pillow
   ```
-  
-### 2. Download Your PDF
+_________________________________________________________________________________________________________________________________________________________________________________________
+### 2. Download Your PDF:
 
 - Download an issue of "The Colored American Magazine" as a PDF.
 - Note the full path to your PDF file.  
   Example:  
   `/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/images/TheColoredAmerican.pdf`
 
+_________________________________________________________________________________________________________________________________________________________________________________________
 ### 3. Run the Script
 
-- Open a terminal and change directory to where `simple_ocr.py` is located.
+- Open a Python terminal and change directory to where `simple_ocr.py` is located.
 - Run the following command (replace the PDF path with your own if different):
 
   ```python
   python simple_ocr.py "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/images/TheColoredAmerican.pdf"
   ```
+_________________________________________________________________________________________________________________________________________________________________________________________
+### 4. Extraction Details
 
-  Or, if you need to use the full path to your Python interpreter:
+- The script automatically extracts:
+  - **Cover page:** Only page 1 of the PDF, saving OCR text to `ocr-pages/cover_page.txt`.
+  - **Poem "Truth":** Only page 9 of the PDF, saving OCR text to `ocr-pages/truth_poem.txt`.
 
-  ```python
-  "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/ocr_proj_env/bin/python" "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/simple_ocr.py" "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/images/TheColoredAmerican.pdf"
-  ```
+- Processed page images are saved in the `processed-imgs` directory.
 
-### 4. Find the Results
+_________________________________________________________________________________________________________________________________________________________________________________________
+### 5. Find the Results
 
-- The script will:
-  - Create a folder called `processed-imgs` containing PNG images for each PDF page.
-  - Save all extracted text to `ocr-results.txt`.
-  - Attempt to extract the poem "Truth" and save it to `poem_truth.txt`.
+- Find your extracted text files in the `ocr-pages` directory:
+  - `cover_page.txt` contains the OCR output of the cover page.
+  - `truth_poem.txt` contains the OCR output of the poem "Truth".
 
-### 5. Troubleshooting
+_________________________________________________________________________________________________________________________________________________________________________________________
+### 6. Troubleshooting
 
 - If you see errors about missing packages, rerun:
   ```bash
   pip install wand pytesseract Pillow
   ```
 - If you see errors about ImageMagick or Tesseract, ensure they are installed and added to your system PATH.
-- Make sure you provide the correct path to your PDF file.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Make sure you provide the correct path to your PDF file
 
 
 
