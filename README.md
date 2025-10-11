@@ -2,75 +2,83 @@
 
 # Project Overview:
 
-This repository provides tools and instructions for processing issues of "The Colored American Magazine," a historic Black publication advocating for Black identity and representation in the early 19th century.
+This repository provides tools and instructions for processing an issue of The Colored American Magazine, a historic Black publication advocating for Black identity and representation in the early 19th century. The second Python script, "Contrast and Enhancement," will examine the cover of The Colored American Magazine. Using OpenAI's GPT-5-nano, I will further process the extracted text to interpret or clarify content where OCR is imperfect. 
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
+## Quick Start
 
-# Workflow Instructions:
+Follow these steps to run the OCR script on an issue of "The Colored American Magazine":
 
-- Select one issue of "The Colored American Magazine" and download it as a PDF
-- Run the provided Python script to:
-  - Convert the PDF into images (using ImageMagick via wand).
-  - Perform OCR on the images to extract text (using Tesseract).
-  - Save results to a text file.
+### 1. Prepare Your Environment
 
-- The script extracts all text
-- To focus on the cover page and the poem entitled "Truth,"
-	- Review the output file (`ocr-results.txt`) and locate these sections manually 
+- **Install system dependencies:**
+  - [ImageMagick](https://imagemagick.org/script/download.php)
+  - [Tesseract OCR](https://tesseract-ocr.github.io/)
+- **Install Python packages:**
+  ```Python
+  pip install wand pytesseract Pillow
+  ```
+  
+### 2. Download Your PDF
 
-- To further process the extracted text with OpenAI’s GPT-5-nano to interpret or clarify content, especially where OCR is imperfect
+- Download an issue of "The Colored American Magazine" as a PDF.
+- Note the full path to your PDF file.  
+  Example:  
+  `/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/images/TheColoredAmerican.pdf`
 
-_________________________________________________________________________________________________________________________________________________________________________________________
+### 3. Run the Script
 
-# Goal of Project:
-- Analyze how GPT-5-nano handles text with imperfect OCR:
-	 - Observe if the model helps clarify content.  
-  	 - Note where it may distort images or omit language.
+- Open a terminal and change directory to where `simple_ocr.py` is located.
+- Run the following command (replace the PDF path with your own if different):
 
-_________________________________________________________________________________________________________________________________________________________________________________________
+  ```python
+  python simple_ocr.py "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/images/TheColoredAmerican.pdf"
+  ```
 
-# Requirements and Installation of Pytesseract:
-- Python 3.x
-- [ImageMagick](https://imagemagick.org/)
-- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) 
-- Python packages and How to Install: `wand`, `pytesseract`, `Pillow`
-    ```bash
-    pip install wand pytesseract Pillow
-    ```
+  Or, if you need to use the full path to your Python interpreter:
 
-_________________________________________________________________________________________________________________________________________________________________________________________
+  ```python
+  "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/ocr_proj_env/bin/python" "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/simple_ocr.py" "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/images/TheColoredAmerican.pdf"
+  ```
 
-# Usage:
+### 4. Find the Results
 
-1. Place your selected PDF in the `input/` directory.
+- The script will:
+  - Create a folder called `processed-imgs` containing PNG images for each PDF page.
+  - Save all extracted text to `ocr-results.txt`.
+  - Attempt to extract the poem "Truth" and save it to `poem_truth.txt`.
 
-2. Run the following command to convert the PDF to images:
-    ```bash
-    magick input/yourfile.pdf input/page_%d.png
-    ```
-    
-3. Run Tesseract on each image to extract text:
-    ```bash
-    tesseract input/page_1.png output/page_1.txt
-    ```
-    
-4. Run the provided "simple_ocr" Python script to:
-    - Extract the cover page
-    - Extract the poem “Truth”
-    - Prepare text for GPT-5-nano interpretation
+### 5. Troubleshooting
 
-5. Review results in the `output/` directory.
+- If you see errors about missing packages, rerun:
+  ```bash
+  pip install wand pytesseract Pillow
+  ```
+- If you see errors about ImageMagick or Tesseract, ensure they are installed and added to your system PATH.
+- Make sure you provide the correct path to your PDF file.
 
-_________________________________________________________________________________________________________________________________________________________________________________________
 
-# Instructions for Creating A Virtual Environment:
-_________________________________________________________________________________________________________________________________________________________________________________________
 
-Before installing pdf2image, create a virtual environment in your VSCode terminal. Instructions below:
-   
-   		 python3 -m venv venv
-    	 source .venv/bin/activate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 To Run Contrast and Enhancement Script "opencv-python" must be installed. Instructions below:
