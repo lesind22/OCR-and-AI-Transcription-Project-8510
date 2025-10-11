@@ -73,5 +73,9 @@ To Run Contrast and Enhancement Script "opencv-python" must be installed. Instru
 	    pip install opencv-python
 
 
+To Run Contrast and Enhancement Script input in Terminal:
+
+		python "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/Contrast and Enhancement.py" "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/processed-imgs/page_1.png" 
+		
 
 
