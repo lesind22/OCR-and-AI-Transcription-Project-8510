@@ -57,8 +57,8 @@ ________________________________________________________________________________
 
 Before installing pdf2image, create a virtual environment in your VSCode terminal. Instructions below:
    
-    python3 -m venv venv
-    source .venv/bin/activate
+   		 python3 -m venv venv
+    	 source .venv/bin/activate
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
