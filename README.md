@@ -1,6 +1,8 @@
 # OCR-and-AI-Transcription-Project-8510
 
 I am working with "The Colored American Magazine," a Black magazine publication that contributed to advocating for Black identity and representation in the early 19th century. I plan to: 
+
+
         - Select one issue of "The Colored American Magazine" 
         - Download it as a PDF 
         - Convert it to images using ImageMagick
