@@ -10,7 +10,9 @@ ________________________________________________________________________________
 
 Follow these steps to extract the cover page (page 1) and the poem "Truth" (page 9) using the OCR script:
 
-### 1. Prepare Your Environment:
+### 1. Prepare Your Virtual Environment in VSC:
+		python -m venv .venv
+		source .venv/bin/activate
 
 - **Install system dependencies:**
   - [ImageMagick](https://imagemagick.org/script/download.php)
