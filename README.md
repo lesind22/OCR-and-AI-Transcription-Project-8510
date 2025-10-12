@@ -80,7 +80,7 @@ If you need `matplotlib numpy` installation instructions, they are below:
 
 To Run Contrast and Enhancement Script input in Terminal:
 
-		python "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/Contrast and Enhancement.py" "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/processed-imgs/page_1.png" 
+		python "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/Contrast and Enhancement.py" --image "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/processed-imgs/page_1.png"
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
