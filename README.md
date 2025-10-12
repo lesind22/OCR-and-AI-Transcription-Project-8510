@@ -2,7 +2,9 @@
 
 # Project Overview:
 
-This repository provides tools and instructions for processing an issue of The Colored American Magazine. The second Python script, "Contrast and Enhancement," will examine the cover of The Colored American Magazine. Using OpenAI's GPT-5-nano, I will further process the extracted text "Truth" and the text from the cover page to interpret or clarify content where OCR is imperfect. 
+This repository provides tools and instructions for processing an issue of The Colored American Magazine. The second Python script, "Contrast and Enhancement," will examine the cover page using different contrast enhancement techniques. Using OpenAI's GPT-5-nano, I will further process the extracted text from the cover page to interpret or clarify content where OCR is imperfect. 
+
+In my "ocr_pages" folder, I store the text files from experimenting with Tesseract and the text from the cover page. In my "ocr_results" folder, I store the text file results from the cover page, with AI correction and without AI correction.
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
@@ -78,12 +80,9 @@ If you need `matplotlib numpy` installation instructions, they are below:
 
 To Run Contrast and Enhancement Script input in Terminal:
 
-		python "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/Contrast and Enhancement.py" "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/processed-imgs/page_1.png" 
+		python "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/Contrast and Enhancement.py" --image "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/processed-imgs/page_1.png"
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
-To Run OpenAPI AI Testing Script "open ai" must be installed. Instruction below:
-
-		pip instal openai 
 
 
