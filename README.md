@@ -4,7 +4,7 @@
 
 This repository provides tools and instructions for processing an issue of The Colored American Magazine. The second Python script, "Contrast and Enhancement," will examine the cover page using different contrast enhancement techniques. Using OpenAI's GPT-5-nano, I will further process the extracted text from the cover page to interpret or clarify content where OCR is imperfect. 
 
-In my "ocr_pages" folder, I store the text files from experimenting with Tesseract and the text from the cover page. In my "ocr_results" folder, I store the text file results from the cover page, with AI correction and without AI correction.
+In my "ocr-pages" folder, I store the text files from experimenting with Tesseract and the text from the cover page. In my "ocr_results" folder, I store the text file results from the cover page, with AI correction and without AI correction. The extraction photos using Tesseract are in the "simple_ocr" folder. 
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
