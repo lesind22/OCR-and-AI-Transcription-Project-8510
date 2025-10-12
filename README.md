@@ -84,8 +84,5 @@ To Run Contrast and Enhancement Script input in Terminal:
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
-To Run OpenAPI AI Testing Script "open ai" must be installed. Instruction below:
-
-		pip instal openai 
 
 
