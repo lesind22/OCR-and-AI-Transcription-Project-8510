@@ -17,11 +17,10 @@ Requirements:
         pip install opencv-python numpy matplotlib (Instructions in README)
 
 How to run:
-    # Activate your virtual environment, then run ENTIRE command in Terminal: (MAKE SURE CHANGES ARE IN INSTRUCTIONS)
+    # Activate your virtual environment, then run ENTIRE command in Terminal: 
 
-   /Users/indiralessington/Desktop/8510\ Unit\ 2\ Converting\ Hist.\ Docs.\ Text\ to\ Digital\ Data/ocr_proj_env/bin/python \
-/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/Contrast and Enhancement.py" \
---image "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/processed-imgs/page_1.png"
+    python "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/Contrast and Enhancement.py" --image "/Users/indiralessington/Desktop/8510 Unit 2 Converting Hist. Docs. Text to Digital Data/processed-imgs/page_1.png"
+
 
 """
 
