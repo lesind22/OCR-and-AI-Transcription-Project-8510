@@ -2,7 +2,9 @@
 
 # Project Overview:
 
-This repository provides tools and instructions for processing an issue of The Colored American Magazine. The second Python script, "Contrast and Enhancement," will examine the cover of The Colored American Magazine. Using OpenAI's GPT-5-nano, I will further process the extracted text "Truth" and the text from the cover page to interpret or clarify content where OCR is imperfect. 
+This repository provides tools and instructions for processing an issue of The Colored American Magazine. The second Python script, "Contrast and Enhancement," will examine the cover page. Using OpenAI's GPT-5-nano, I will further process the extracted text from the cover page to interpret or clarify content where OCR is imperfect. 
+
+In my "OCR_pages" folder, I store the text files using Tesseract and the text from the cover page. In my "ocr_ai_correction" folder, I store the text file results from the cover page and "Truth" with AI correction. The PDF folder holds "The Colored American Magazine." 
 
 _________________________________________________________________________________________________________________________________________________________________________________________
 
