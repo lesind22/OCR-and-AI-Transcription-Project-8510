@@ -6,25 +6,31 @@ This repository provides tools and instructions for processing an issue of The C
 
 Below is what is included in each of the folders in this GitHub Repo:
 
-	1. Contrast Results:
+1. Contrast Results:
         Each of the five contrast and enhancement techniques in .png formatting
 
-    2. Cover page script:
+
+2. Cover page script:
         Contrast and enhancement script
-    
-    3. Extraction of specified pages:
+
+	
+3. Extraction of specified pages:
         Simple_ocr script using Tesseract
 
-    4. o4- model extraction:
+
+4. o4- model extraction:
         Truth_processing.json from the OpenAI application
 
-    5. ocr_pages:
+
+5. ocr_pages:
         Includes the cover_page.txt and the Truth poem results from Tesseract
 
-    6. ocr_results:
+
+6. ocr_results:
         Using my API key and script, here are the results from using the cover page
 
-    7. simple_ocr:
+
+7. simple_ocr:
         Processed images using Tesseract
     
 
