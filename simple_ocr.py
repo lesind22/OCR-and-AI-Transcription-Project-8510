@@ -7,7 +7,7 @@ This script demonstrates how to use Tesseract OCR on selected pages (cover and p
 converted from a PDF using ImageMagick.
 
 Key features:
-- Extracts only specified pages (cover page and a poem page)
+- Extracts only specified pages (cover page and a poem pages)
 - Simple OCR with PSM 3 (default mode)
 - Text cleaning and formatting
 - Results saved to text files
